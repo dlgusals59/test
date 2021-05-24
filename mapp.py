@@ -3,7 +3,7 @@ import pandas as pd
 import plotly.express as px
 def app():
     st.header("서울시 소방대상물 위치정보")
-    data=pd.read_csv('data/위치정보_data.csv',encoding='cp949')
+    data=pd.read_csv('data/위치정보.csv',encoding='cp949')
     data["건물층수"]=data["건물층수"].apply(lambda x:int(x))
     data=data.head(1000)
     col_filter1, col_filter2, col_filter3, col_filter4 = st.beta_columns(4)
