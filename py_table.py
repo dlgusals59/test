@@ -141,7 +141,7 @@ def app():
     col1,col2 = st.beta_columns(2)
     #table_chart.set_index('column', inplace=True)
     col1.dataframe(table_chart,height=600,width=2000)
-    col2.markdown("<h5 style='text-align: center; margin:0 0;'>Demo에 사용한 데이터는 kaggle의 E-commerce 사용<br>(E-commerce의 Order Date Column 에서 year에 +4~+6를 랜덤으로 더해줌)</h5>",
+    col2.markdown("<h5 style='text-align: center; margin:0 0;'>Demo에 사용한 데이터는 kaggle의 E-commerce 사용<br><br>(E-commerce의 Order Date Column 에서 year에 +4~+6를 랜덤으로 더해줌)</h5>",
                 unsafe_allow_html=True)
 
     raw_data=pd.read_csv('data/ecommerce.csv',dtype={"Sales":"string","Quantity":"string","Profit":"string"})
